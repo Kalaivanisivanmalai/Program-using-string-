@@ -1,0 +1,46 @@
+# Program-using-string-
+coding:
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        String str3 = "hello";
+        String result = str1 + " " + str2; 
+  System.out.println("Concatenated String: " + result);
+        System.out.println("Length of str1: " + str1.length());
+        System.out.println("Are str1 and str3 equal? " + str1.equals(str3)); 
+        System.out.println("Are str1 and str3 equal (ignore case)? " + str1.equalsIgnoreCase(str3));
+        System.out.println("str1 in uppercase: " + str1.toUpperCase());
+        System.out.println("str2 in lowercase: " + str2.toLowerCase());
+        System.out.println("Does str1 contain 'll'? " + str1.contains("ll"));
+        String replacedString = str2.replace('o', 'a');
+        System.out.println("Replaced 'o' with 'a' in str2: " + replacedString);
+        String substring = result.substring(6, 11); // Extract "World"
+        System.out.println("Substring of result: " + substring);
+        String sentence = "Java is fun!";
+        String[] words = sentence.split(" "); 
+        System.out.println("Words in the sentence:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+        String strWithSpaces = "   Java Programming   ";
+        System.out.println("Before trim: '" + strWithSpaces + "'");
+        System.out.println("After trim: '" + strWithSpaces.trim() + "'");
+    }
+}
+
+output:Concatenated String: Hello World
+Length of str1: 5
+Are str1 and str3 equal? false
+Are str1 and str3 equal (ignore case)? true
+str1 in uppercase: HELLO
+str2 in lowercase: world
+Does str1 contain 'll'? true
+Replaced 'o' with 'a' in str2: Warld
+Substring of result: World
+Words in the sentence:
+Java
+is
+fun!
+Before trim: '   Java Programming   '
+After trim: 'Java Programming'
